@@ -2,7 +2,7 @@
 
 <br />
 
-<div align="center">GL-CMS codebase, a focus on performance and best practices</div>
+<div align="center">React Boilerplate, a focus on performance and best practices</div>
 
 <br />
 

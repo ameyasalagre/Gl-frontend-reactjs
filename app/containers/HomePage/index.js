@@ -55,8 +55,8 @@ export function HomePage({
   return (
     <article>
       <Helmet>
-        <title>GL</title>
-        <meta name="description" content="Single Point of Contact" />
+        <title>React Boilerplate</title>
+        <meta name="description" content="ReactJS" />
       </Helmet>
       <div>
         <Section>
