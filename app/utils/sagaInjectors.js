@@ -76,6 +76,10 @@ export function ejectSagaFactory(store, isValid) {
           // Need some value to be able to detect `ONCE_TILL_UNMOUNT` sagas in `injectSaga`
           store.injectedSagas[key] = 'done'; // eslint-disable-line no-param-reassign
         }
+        if (process.env.NODE_ENV === 'pre-prod') {
+          // Need some value to be able to detect `ONCE_TILL_UNMOUNT` sagas in `injectSaga`
+          store.injectedSagas[key] = 'done'; // eslint-disable-line no-param-reassign
+        }
       }
     }
   };
