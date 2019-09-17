@@ -9,7 +9,7 @@
 
 
 <div align="center">
-  <sub>Created by <a href="https://www.instarem.com/en-in//">Instarem India</sub>
+  <sub>Created by <a href="https://www.instarem.com/en-in/">Instarem India</sub>
 </div>
 
 ## Features
