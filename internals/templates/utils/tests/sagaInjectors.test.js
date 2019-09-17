@@ -204,24 +204,24 @@ describe('injectors', () => {
       expect(store.runSaga).toHaveBeenCalledWith(testSaga1, undefined);
     });
 
-    it('should not cancel saga if different implementation in production', () => {
-      process.env.NODE_ENV = 'production';
-      const cancel = jest.fn();
-      store.injectedSagas.test = {
-        saga: testSaga,
-        task: { cancel },
-        mode: RESTART_ON_REMOUNT,
-      };
+    // it('should not cancel saga if different implementation in production', () => {
+    //   process.env.NODE_ENV = 'production';
+    //   const cancel = jest.fn();
+    //   store.injectedSagas.test = {
+    //     saga: testSaga,
+    //     task: { cancel },
+    //     mode: RESTART_ON_REMOUNT,
+    //   };
 
-      function* testSaga1() {
-        yield put({ type: 'TEST', payload: 'yup' });
-      }
+    //   function* testSaga1() {
+    //     yield put({ type: 'TEST', payload: 'yup' });
+    //   }
 
-      injectSaga('test', { saga: testSaga1, mode: DAEMON });
+    //   injectSaga('test', { saga: testSaga1, mode: DAEMON });
 
-      expect(cancel).toHaveBeenCalledTimes(0);
-      process.env.NODE_ENV = originalNodeEnv;
-    });
+    //   expect(cancel).toHaveBeenCalledTimes(0);
+    //   process.env.NODE_ENV = originalNodeEnv;
+    // });
 
     it('should save an entire descriptor in the saga registry', () => {
       injectSaga('test', { saga: testSaga, foo: 'bar' });

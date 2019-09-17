@@ -2,11 +2,21 @@
 
 const express = require('express');
 const logger = require('./logger');
-
+const path = require('path');
 const argv = require('./argv');
-const port = require('./port');
 const setup = require('./middlewares/frontendMiddleware');
 const isDev = process.env.NODE_ENV !== 'production' || 'preprod';
+const env = require('dotenv');
+
+const envFilePath = `${process.env.NODE_ENV || 'development'}.env`;
+const result = env.config({
+  path: path.join(__dirname, 'config', envFilePath),
+});
+if (result.error) {
+  throw result.error;
+}
+
+const port = process.env.PORT;
 
 const ngrok =
   (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel
