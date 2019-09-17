@@ -65,11 +65,9 @@ There’s also a <a href="https://vimeo.com/168648012">fantastic video</a> on ho
 
 Now you're ready to rumble!
 
-> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
-
 ## Documentation
 
-- [**The Hitchhiker's Guide to `react-boilerplate`**](docs/general/introduction.md): An introduction for newcomers to this boilerplate.
+- [**Guide to `react-boilerplate`**](docs/general/introduction.md): An introduction for newcomers to this boilerplate.
 - [Overview](docs/general): A short overview of the included tools
 - [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
 - [Testing](docs/testing): How to work with the built-in test harness
